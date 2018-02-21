@@ -1,3 +1,5 @@
+// https://www.npmjs.com/package/react-google-maps
+// the docs from this dependency provide the majority of the codebase here
 import React from 'react'
 import { compose, withProps, withStateHandlers } from 'recompose'
 import { withScriptjs, withGoogleMap, GoogleMap, Marker } from 'react-google-maps'
@@ -11,7 +13,6 @@ const MyMapComponent = compose(
     containerElement: <div style={{ height: `400px` }} />,
     mapElement: <div style={{ height: `100%` }} />
   }),
-
   withStateHandlers(() => ({
     isOpen: false
   }), {
@@ -23,25 +24,33 @@ const MyMapComponent = compose(
   withGoogleMap
 )(
   (props) =>
-    <GoogleMap
-      defaultZoom={14}
-      defaultCenter={{ lat: 38.9072, lng: -77.0369 }} >
-      <Marker
-        position={{ lat: 38.914081, lng: -77.032639 }}
-        onClick={props.onToggleOpen} >
-        {props.isOpen &&
-        <InfoBox
-          onCloseClick={props.onToggleOpen}
-          options={{ closeBoxURL: ``, enableEventPropagation: true }} >
-          <div style={{ backgroundColor: `#6FC3CC`, opacity: 0.9, padding: `12px` }}>
-            <div style={{ fontSize: `16px`, fontColor: `#08233B` }}>
-              <h3>Voyer: U St Corridor</h3>
-              <img src='https://i.imgur.com/XIcKTav.jpg' style={{width: '180px', height: '100px'}} />
-            </div>
-          </div>
-        </InfoBox>}
-      </Marker>
-    </GoogleMap>
+    <div>
+      <GoogleMap
+        defaultZoom={14}
+        defaultCenter={{ lat: 38.9072, lng: -77.0369 }} >
+        <div>
+          {props.data.map((marker, index) => {
+            return (
+              <Marker key={marker.id}
+                position={{ lat: marker.lat, lng: marker.lng }}
+                onClick={props.onToggleOpen} >
+                {props.isOpen &&
+                <InfoBox
+                  onCloseClick={props.onToggleOpen}
+                  options={{ closeBoxURL: ``, enableEventPropagation: true }} >
+                  <div style={{ backgroundColor: `#6FC3CC`, opacity: 0.9, padding: `12px` }}>
+                    <div style={{ fontSize: `16px`, fontColor: `#08233B` }}>
+                      {marker.artist}
+                      <a href={marker.image_url}><img src={marker.image_url} style={{width: '180px', height: '100px'}} /></a>
+                    </div>
+                  </div>
+                </InfoBox>}
+              </Marker>
+            )
+          })}
+        </div>
+      </GoogleMap>
+    </div>
 )
 
 export default MyMapComponent
