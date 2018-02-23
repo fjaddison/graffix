@@ -1,7 +1,7 @@
 import React from 'react'
 import MyMapComponent from './MyMapComponent'
-import { Marker } from 'react-google-maps'
 import { loadBackendData } from '../requests'
+import './styles/MapContainer.css'
 
 export default class MapContainer extends React.PureComponent {
   constructor (props) {
@@ -9,10 +9,6 @@ export default class MapContainer extends React.PureComponent {
     this.state = {
       markers: []
     }
-  }
-
-  makeNewMarker (event) {
-    React.createElement(Marker)
   }
 
   setMarkers () {
@@ -30,7 +26,9 @@ export default class MapContainer extends React.PureComponent {
 
   render (props) {
     return (
-      <MyMapComponent makeMarker={this.makeNewMarker.bind(this)} data={this.state.markers} />
+      <div className='map-container' >
+        <MyMapComponent data={this.state.markers} />
+      </div>
     )
   }
 }

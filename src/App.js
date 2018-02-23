@@ -1,13 +1,16 @@
 import React, { Component } from 'react'
 import MapContainer from './components/MapContainer'
+import Header from './components/Header'
+import Footer from './components/Footer'
 import './App.css'
 
 class App extends Component {
   render () {
     return (
       <div className='App' id='app'>
-        <p>this is the react App component</p>
+        <Header />
         <MapContainer />
+        <Footer />
       </div>
     )
   }
