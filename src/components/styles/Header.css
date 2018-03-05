@@ -1,8 +1,18 @@
 .header {
-  height: 150px;
+  height: 200px;
   background-color: #4788F4;
+  width:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* box-shadow: 0 0 7px 1px black; */
 }
 
 h1 {
-  padding-top: 40px;
+  font-size: 100px;
+  padding: 5px;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 4px;
+  border: 5px solid #FBC014; 
 }

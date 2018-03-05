@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="theme-color" content="#000000">
@@ -26,59 +28,5 @@
       You need to enable JavaScript to run this app.
     </noscript>
     <div id="root"></div>
-    
-    <!-- <script>
-      // how do we translate this to React without a library?
-      // how do we pass state to markers?
-      // how do we set the state of the markers?
-      function initMap () {
-        // this sets the initial point of view
-        let options = {
-          zoom: 13,
-          center: {
-            lat: 38.9072,
-            lng: -77.0369
-          }
-        }
-        let map = new 
-        google.maps.Map(document.getElementById('map'), options)
-        
-        // add event listener to add marker on click
-        google.maps.event.addListener(map, 'click', function (event) {
-          addMarker({coords: event.latLng})
-        })
-
-        // array of markers
-        let markers = [
-          {
-          coords: {lat: 38.914081, lng: -77.032639},
-          content: '<h1>Voyer: U Street Corridor</h1><br /><img src="https://i.imgur.com/XIcKTav.jpg" height="100" width="180">'
-          }
-        ]
-
-        for (let i =0; i < markers.length; i++) {
-          addMarker(markers[i])
-        }
-
-        //add marker function
-        function addMarker (props) {
-          let marker = new
-        // 38.914081, -77.032639
-          google.maps.Marker({
-            position: props.coords,
-            map: map
-          })
-          if (props.content) {  
-            let infoWindow = new
-            google.maps.InfoWindow({
-              content: props.content
-            })
-            marker.addListener('click', function() {
-              infoWindow.open(map, marker)
-            })
-          }  
-        }
-      }
-    </script> -->
   </body>
 </html>

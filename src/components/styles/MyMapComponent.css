@@ -3,5 +3,7 @@
   text-align: center;
   flex-direction: column;
   justify-content: center;
+  font-family: 'Zilla Slab', arial;
+  color: white;
 }
 

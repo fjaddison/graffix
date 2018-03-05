@@ -2,7 +2,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 450px;
+  height: 550px;
 }
 
 
+img {
+  padding-top: 4px;
+}
+
+img:hover {
+  box-shadow: 0 0 7px 1px #4788F4;
+}

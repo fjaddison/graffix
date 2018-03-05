@@ -41,7 +41,7 @@ const MyMapComponent = compose(
                   onCloseClick={props.onToggleOpen}
                   options={{ closeBoxURL: ``, enableEventPropagation: false }} >
                   <div className='info-box' style={{ backgroundColor: `#36A954`, opacity: 0.9, padding: `12px` }}>
-                    <div style={{ fontSize: `14px`, fontColor: `#08233B` }}>
+                    <div style={{ fontSize: `16px`, fontColor: `#08233B` }}>
                       {marker.artist}<br />
                       <a href={marker.image_url}><img src={marker.image_url} style={{width: '90px', height: '50px'}} /></a>
                     </div>

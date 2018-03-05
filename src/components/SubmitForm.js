@@ -37,14 +37,14 @@ export default class SubmitForm extends Component {
 
   render () {
     return (
-      <div>
+      <div className='form-div' >
         <form>
-          <input onChange={this.handleChange} placeholder='Artist' name='artist' />
-          <input onChange={this.handleChange} placeholder='Image URL' name='image_url' />
-          <input onChange={this.handleChange} placeholder='Neighborhood' name='neighborhood' />
-          <input onChange={this.handleNumberChange} placeholder='Latitude' name='lat' />
-          <input onChange={this.handleNumberChange} placeholder='Longitude' name='lng' />
-          <button onClick={this.handleSubmit} type='submit' >Submit</button>
+          <input className='form-unit' onChange={this.handleChange} placeholder='Artist' name='artist' />
+          <input className='form-unit' onChange={this.handleChange} placeholder='Image URL' name='image_url' />
+          <input className='form-unit' onChange={this.handleChange} placeholder='Neighborhood' name='neighborhood' />
+          <input className='form-unit' onChange={this.handleNumberChange} placeholder='Latitude' name='lat' />
+          <input className='form-unit' onChange={this.handleNumberChange} placeholder='Longitude' name='lng' /><br /><br />
+          <button className='form-unit' onClick={this.handleSubmit} type='submit' >Submit</button>
         </form>
       </div>
     )

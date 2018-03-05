@@ -1,5 +1,8 @@
 .App {
   text-align: center;
   background: #EB4D3F;
+  font-family: 'Zilla Slab', arial;
+  display: flex;
+  flex-direction: column;
 }
 
