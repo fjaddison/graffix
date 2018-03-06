@@ -1,1 +1,1 @@
-export const DB_URL = 'http://localhost:3000/api/v1/pieces.json'
+export const DB_URL = 'https://mighty-escarpment-31473.herokuapp.com/api/v1/pieces.json'
